@@ -1,20 +1,587 @@
 <!DOCTYPE html>
 <html lang="ro">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nunți Elegante by Mamira Events</title>
-    <meta name="description" content="Transformă-ți ziua specială cu serviciile noastre elegante de decorațiuni pentru nunți. De la arcuri pentru ceremonie la centrepieces pentru recepție, creăm momente magice care reflectă povestea voastră unică de dragoste." />
-    <meta name="author" content="Nunți Elegante" />
-    <meta name="keywords" content="decorațiuni nunți, arc ceremonie, centrepieces recepție, flori nuntă, iluminat locație, planificare nuntă" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nunți Elegante - Servicii Premium de Decorațiuni pentru Nunți</title>
+    <meta name="description" content="Transformă-ți ziua specială cu serviciile noastre elegante de decorațiuni pentru nunți. De la arcuri pentru ceremonie la centrepieces pentru recepție, creăm momente magice care reflectă povestea voastră unică de dragoste.">
+    <meta name="author" content="Nunți Elegante">
+    <meta name="keywords" content="decorațiuni nunți, arc ceremonie, centrepieces recepție, flori nuntă, iluminat locație, planificare nuntă">
+    <meta property="og:title" content="Nunți Elegante - Servicii Premium de Decorațiuni pentru Nunți">
+    <meta property="og:description" content="Transformă-ți ziua specială cu serviciile noastre elegante de decorațiuni pentru nunți. Creând momente magice cu decorațiuni frumoase din 2015.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        /* Custom Wedding Styles */
+        .font-display { font-family: 'Playfair Display', serif; }
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* White & Silver Color Palette */
+        :root {
+            --primary: #737373;
+            --primary-glow: #a3a3a3;
+            --secondary: #f7f7f7;
+            --elegant: #404040;
+            --romantic: #e5e5e5;
+        }
+        
+        .gradient-romantic { 
+            background: linear-gradient(135deg, var(--primary), var(--primary-glow)); 
+        }
+        .gradient-elegant { 
+            background: linear-gradient(180deg, #ffffff, var(--secondary)); 
+        }
+        .shadow-romantic { 
+            box-shadow: 0 10px 30px -10px rgba(115, 115, 115, 0.3); 
+        }
+        .shadow-elegant { 
+            box-shadow: 0 20px 40px -15px rgba(64, 64, 64, 0.2); 
+        }
+        .transition-romantic { 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .transition-elegant { 
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+        }
+        
+        .text-primary { color: var(--primary); }
+        .bg-primary { background-color: var(--primary); }
+        .border-primary { border-color: var(--primary); }
+        .hover\\:bg-primary:hover { background-color: var(--primary); }
+        .hover\\:text-primary:hover { color: var(--primary); }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Hover effects */
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .hover-shadow:hover {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i data-lucide="heart" class="h-8 w-8 text-primary"></i>
+                <h1 class="text-2xl font-display font-bold text-primary">Nunți Elegante</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-primary transition-colors">Acasă</a>
+                <a href="#services" class="text-gray-700 hover:text-primary transition-colors">Servicii</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-primary transition-colors">Portofoliu</a>
+                <a href="#about" class="text-gray-700 hover:text-primary transition-colors">Despre Noi</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <button class="gradient-romantic text-white px-6 py-2 rounded-lg shadow-romantic transition-romantic hover:shadow-elegant">
+                Cere Ofertă
+            </button>
+        </div>
+    </header>
 
-    <meta property="og:title" content="Nunți Elegante by Mamira Events" />
-    <meta property="og:description" content="Transformă-ți ziua specială cu serviciile noastre elegante de decorațiuni pentru nunți. Creând momente magice cu decorațiuni frumoase din 2015." />
-    <meta property="og:type" content="website" />
-  </head>
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 gradient-elegant"></div>
+        <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://vbciccm52f.skywork.website/images/wedding_centerpieces_1.jpeg')"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 animate-fade-in-up">
+            <h1 class="text-5xl md:text-7xl font-display font-bold text-gray-900 mb-6">
+                Nunta Ta de Vis
+                <span class="block text-primary">Frumos Decorată</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Creând momente magice cu decorațiuni elegante care reflectă povestea voastră unică de dragoste
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="gradient-romantic text-white px-8 py-3 rounded-lg shadow-romantic transition-romantic hover:shadow-elegant">
+                    Vezi Lucrările Noastre
+                </button>
+                <button class="border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-romantic">
+                    Programează Consultație
+                </button>
+            </div>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-gray-100 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">Serviciile Noastre</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">
+                    Servicii de Decorațiuni pentru Nunți
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    De la ceremonii intime la recepții grandioase, creăm decorațiuni uimitoare pentru fiecare moment
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-elegant hover:shadow-romantic transition-romantic hover-scale">
+                    <div class="aspect-square overflow-hidden rounded-t-lg">
+                        <img src="https://vbciccm52f.skywork.website/images/ceremony_arches_1.jpeg" alt="Decorațiuni pentru Ceremonie" class="w-full h-full object-cover transition-elegant hover-scale">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-semibold mb-2">Decorațiuni pentru Ceremonie</h3>
+                        <p class="text-gray-600 mb-4">Arcuri frumoase, covoare pentru culoar și aranjamente pentru altar pentru a face ceremonia ta de neuitat.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">Începând de la 3.600 lei</span>
+                            <button class="border border-primary text-primary px-4 py-2 rounded hover:bg-primary hover:text-white transition-colors">
+                                Află Mai Mult
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-elegant hover:shadow-romantic transition-romantic hover-scale">
+                    <div class="aspect-square overflow-hidden rounded-t-lg">
+                        <img src="https://vbciccm52f.skywork.website/images/wedding_centerpieces_1.jpeg" alt="Centrepieces pentru Recepție" class="w-full h-full object-cover transition-elegant hover-scale">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-semibold mb-2">Centrepieces pentru Recepție</h3>
+                        <p class="text-gray-600 mb-4">Centrepieces elegante pentru mese care creează atmosfera perfectă pentru celebrarea ta.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">Începând de la 200 lei/masă</span>
+                            <button class="border border-primary text-primary px-4 py-2 rounded hover:bg-primary hover:text-white transition-colors">
+                                Află Mai Mult
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-elegant hover:shadow-romantic transition-romantic hover-scale">
+                    <div class="aspect-square overflow-hidden rounded-t-lg">
+                        <img src="https://vbciccm52f.skywork.website/images/venue_lighting_1.jpeg" alt="Iluminat pentru Locație" class="w-full h-full object-cover transition-elegant hover-scale">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-semibold mb-2">Iluminat pentru Locație</h3>
+                        <p class="text-gray-600 mb-4">Soluții de iluminat romantic incluzând ghirlande luminoase, uplighting și aranjamente cu lumânări.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">Începând de la 2.700 lei</span>
+                            <button class="border border-primary text-primary px-4 py-2 rounded hover:bg-primary hover:text-white transition-colors">
+                                Află Mai Mult
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-lg shadow-elegant hover:shadow-romantic transition-romantic hover-scale">
+                    <div class="aspect-square overflow-hidden rounded-t-lg">
+                        <img src="https://vbciccm52f.skywork.website/images/wedding_centerpieces_2.jpeg" alt="Aranjamente Florale" class="w-full h-full object-cover transition-elegant hover-scale">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-semibold mb-2">Aranjamente Florale</h3>
+                        <p class="text-gray-600 mb-4">Designuri florale personalizate pentru buchete, cocarde și decorațiuni pentru locație.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">Începând de la 900 lei</span>
+                            <button class="border border-primary text-primary px-4 py-2 rounded hover:bg-primary hover:text-white transition-colors">
+                                Află Mai Mult
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-gray-100 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">Portfolio</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">
+                    Decorațiuni Recente pentru Nunți
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Aruncă o privire la câteva dintre lucrările noastre recente și inspiră-te pentru ziua ta specială
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-lg shadow-elegant hover:shadow-romantic transition-romantic">
+                    <div class="aspect-square">
+                        <img src="https://vbciccm52f.skywork.website/images/wedding_centerpieces_3.jpeg" alt="Nuntă Clasică în Alb" class="w-full h-full object-cover group-hover:scale-105 transition-elegant">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-romantic">
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-white font-display font-semibold text-lg">Nuntă Clasică în Alb</h3>
+                            <div class="flex items-center text-yellow-400 mt-2">
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-elegant hover:shadow-romantic transition-romantic">
+                    <div class="aspect-square">
+                        <img src="https://vbciccm52f.skywork.website/images/ceremony_arches_2.jpeg" alt="Ceremonie în Grădină" class="w-full h-full object-cover group-hover:scale-105 transition-elegant">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-romantic">
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-white font-display font-semibold text-lg">Ceremonie în Grădină</h3>
+                            <div class="flex items-center text-yellow-400 mt-2">
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-elegant hover:shadow-romantic transition-romantic">
+                    <div class="aspect-square">
+                        <img src="https://vbciccm52f.skywork.website/images/reception_tables_1.jpeg" alt="Recepție Aurie" class="w-full h-full object-cover group-hover:scale-105 transition-elegant">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-romantic">
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-white font-display font-semibold text-lg">Recepție Aurie</h3>
+                            <div class="flex items-center text-yellow-400 mt-2">
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-elegant hover:shadow-romantic transition-romantic">
+                    <div class="aspect-square">
+                        <img src="https://vbciccm52f.skywork.website/images/venue_lighting_2.jpeg" alt="Iluminat Romantic" class="w-full h-full object-cover group-hover:scale-105 transition-elegant">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-romantic">
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-white font-display font-semibold text-lg">Iluminat Romantic</h3>
+                            <div class="flex items-center text-yellow-400 mt-2">
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-elegant hover:shadow-romantic transition-romantic">
+                    <div class="aspect-square">
+                        <img src="https://vbciccm52f.skywork.website/images/wedding_centerpieces_4.jpeg" alt="Centrepieces Elegante" class="w-full h-full object-cover group-hover:scale-105 transition-elegant">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-romantic">
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-white font-display font-semibold text-lg">Centrepieces Elegante</h3>
+                            <div class="flex items-center text-yellow-400 mt-2">
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-elegant hover:shadow-romantic transition-romantic">
+                    <div class="aspect-square">
+                        <img src="https://vbciccm52f.skywork.website/images/ceremony_arches_3.jpeg" alt="Arc Exterior" class="w-full h-full object-cover group-hover:scale-105 transition-elegant">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-romantic">
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-white font-display font-semibold text-lg">Arc Exterior</h3>
+                            <div class="flex items-center text-yellow-400 mt-2">
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current mr-1"></i>
+                                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block bg-gray-100 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">Despre Noi</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
+                        Creând Magie din 2015
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Cu peste 8 ani de experiență în decorațiuni pentru nunți, am avut privilegiul de a face parte din zilele speciale ale mai mult de 500 de cupluri. Pasiunea noastră constă în transformarea locațiilor în spații magice care reflectă povestea unică de dragoste a fiecărui cuplu.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        De la ceremonii intime în grădină la recepții grandioase în săli de bal, lucrăm îndeaproape cu clienții noștri pentru a le aduce viziunea la viață cu atenție la fiecare detaliu.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6 text-center">
+                        <div>
+                            <div class="text-3xl font-display font-bold text-primary mb-2">500+</div>
+                            <div class="text-sm text-gray-600">Nunți Decorate</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-display font-bold text-primary mb-2">8+</div>
+                            <div class="text-sm text-gray-600">Ani de Experiență</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-display font-bold text-primary mb-2">100%</div>
+                            <div class="text-sm text-gray-600">Cupluri Fericite</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://vbciccm52f.skywork.website/images/wedding_centerpieces_5.jpeg" alt="About Us" class="rounded-lg shadow-elegant">
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 gradient-romantic rounded-full opacity-20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-gray-100 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">Contact</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">
+                    Să Planăm Ziua Ta Perfectă
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Gata să începi planificarea? Ia legătura cu noi pentru o consultație gratuită
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-display font-semibold mb-6">Ia Legătura cu Noi</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 gradient-romantic rounded-full flex items-center justify-center">
+                                <i data-lucide="phone" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Telefon</div>
+                                <div class="text-gray-600">+40 123 456 789</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 gradient-romantic rounded-full flex items-center justify-center">
+                                <i data-lucide="mail" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Email</div>
+                                <div class="text-gray-600">salut@nuntieelegante.ro</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 gradient-romantic rounded-full flex items-center justify-center">
+                                <i data-lucide="map-pin" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Locație</div>
+                                <div class="text-gray-600">Str. Florilor 123, București, România</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-4">Urmărește-ne</h4>
+                        <div class="flex space-x-4">
+                            <button class="border border-primary text-primary p-3 rounded hover:bg-primary hover:text-white transition-colors">
+                                <i data-lucide="instagram" class="h-5 w-5"></i>
+                            </button>
+                            <button class="border border-primary text-primary p-3 rounded hover:bg-primary hover:text-white transition-colors">
+                                <i data-lucide="facebook" class="h-5 w-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-elegant p-8">
+                    <h3 class="text-2xl font-display font-semibold mb-6">Cere o Ofertă</h3>
+                    <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Prenume</label>
+                                <input type="text" name="firstName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-colors" placeholder="Ion" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Nume</label>
+                                <input type="text" name="lastName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-colors" placeholder="Popescu" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-colors" placeholder="ion@exemplu.ro" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Data Nunții</label>
+                            <input type="date" name="weddingDate" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-colors" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Mesaj</label>
+                            <textarea name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-colors resize-none" placeholder="Spune-ne despre nunta ta de vis..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full gradient-romantic text-white py-3 rounded-lg shadow-romantic transition-romantic hover:shadow-elegant">
+                            Trimite Mesajul
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-lucide="heart" class="h-6 w-6 text-primary"></i>
+                        <h3 class="text-xl font-display font-bold">Nunți Elegante</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Creând momente magice de nuntă cu decorațiuni elegante din 2015.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Servicii</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Decorațiuni pentru Ceremonie</li>
+                        <li>Centrepieces pentru Recepție</li>
+                        <li>Iluminat pentru Locație</li>
+                        <li>Aranjamente Florale</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Companie</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition-colors">Despre Noi</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Portofoliu</a></li>
+                        <li>Mărturii</li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Informații de Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>+40 123 456 789</li>
+                        <li>salut@nuntieelegante.ro</li>
+                        <li>Str. Florilor 123</li>
+                        <li>București, România</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Nunți Elegante. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Create email content
+            const subject = encodeURIComponent('Cerere Ofertă Nunți Elegante');
+            const body = encodeURIComponent(`
+Salut,
+
+Am o cerere de ofertă pentru decorațiuni de nuntă:
+
+Nume: ${data.firstName} ${data.lastName}
+Email: ${data.email}
+Data nunții: ${data.weddingDate}
+
+Mesaj:
+${data.message}
+
+Mulțumesc!
+            `);
+            
+            // Open email client
+            window.location.href = `mailto:salut@nuntieelegante.ro?subject=${subject}&body=${body}`;
+            
+            // Show success message
+            alert('Mulțumim pentru cererea ta! Te-am redirecționat către aplicația de email pentru a trimite mesajul.');
+        }
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections for animations
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
 </html>
